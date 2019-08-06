@@ -1,0 +1,99 @@
+// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+  h1 {
+    text-align: center;
+    border-bottom: 1px solid;
+    padding-bottom: 15px;
+    margin-bottom: 5px;
+  }
+
+  ol {
+    clear: both;
+
+    li {
+      padding: 10px;
+      margin: 10px 0;
+      background: #fafafa;
+      border-radius: 0 8px 8px 0;
+
+      .delete {
+        float: right;
+        color: #999;
+        transition: color 0.25s ease-out;
+        &:hover {
+          color: #f54242
+        }
+      }
+    }
+  }
+
+  .add-task {
+    float: right;
+    padding: 10px;
+    // position: relative;
+
+    .add-hidden {
+      opacity: 0;
+      transition: all 0.25s ease-in;
+    }
+
+    &:hover .add-hidden {
+      opacity: 0.8;
+    }
+  }
+
+  .btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn {
+    display: block;
+    width: max-content;
+    padding: 6px 16px;
+    margin: 3px;
+    border-radius: 24px;
+    text-align: right;
+    border: none;
+    color: white;
+    background: #2270d6;
+    transition: all 0.2s ease-out;
+    a {
+      color: white;
+    }
+
+    &:hover {
+      background: #0c4a9c;
+      cursor: pointer;
+    }
+
+    &.btn-submit {
+      margin: 0 auto;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+
+    .form-group {
+      width: 100%;
+      display: flex;
+      margin-bottom: 15px;
+
+      label {
+        width: 20%;
+        align-self: center;
+      }
+
+      input {
+        flex-grow: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<h1>My tasks</h1>
+<%= link_to new_task_path, class: 'add-task' do %>
+  <span class="add-hidden">Add a new task&emsp;</span><i class="far fa-plus-square"></i>
+<% end %>
+<ol>
+  <% @tasks.each do |task| %>
+  <li>
+    <%= task[:completed] ? '☑' : '☐'%>
+    <%= link_to task[:title], task_path(task) %>
+    <%= link_to task_path(task), method: :delete, data: { confirm: "Are you sure?" } do %>
+      <i class="delete far fa-trash-alt"></i>
+    <% end %>
+  </li>
+  <% end %>
+</ol>
